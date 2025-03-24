@@ -1,0 +1,99 @@
+/* Base styles */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+h2,
+p {
+  color: goldenrod;
+}
+
+/* Parallax effect for header */
+.header {
+  /* The image used */
+  background-image: url("/images/laptop.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Style for the header content */
+.header-content {
+  text-align: center;
+  color: white;
+  padding: 50px;
+}
+
+/* Style for the left-aligned text */
+.left {
+  text-align: left;
+}
+
+/* Style for the h2 element */
+.header-content h2 {
+  font-size: 50px;
+}
+
+/* Style for the paragraph */
+.header-content p {
+  color: white;
+  margin-top: 30px;
+}
+
+/* Style for the button */
+.header-content button {
+  border: none;
+  outline: none;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 20px 0;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+/* Style for the image */
+.header-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 900px) {
+  .header-content h2 {
+    font-size: 40px;
+  }
+  .header-content p {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header-content {
+    margin-top: 50px;
+  }
+  .header-content h2 {
+    font-size: 30px;
+  }
+  .header-content p {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .header-content h2 {
+    font-size: 25px;
+  }
+  .header-content p {
+    font-size: 12px;
+  }
+}

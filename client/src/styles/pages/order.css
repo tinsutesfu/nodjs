@@ -1,0 +1,322 @@
+.place-order {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .place-order-left {
+    width: 100%;
+    max-width: max(30%, 500px);
+  }
+  .title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    color: #ffcc66;
+  }
+  .place-order-left input {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    outline-color: tomato;
+  }
+  .input-button {
+    font-size: large;
+    font-weight: 500;
+    background-color: tomato;
+    color: white;
+    cursor: pointer;
+  }
+  .input-button:hover {
+    background-color: goldenrod;
+  }
+  .multi-field {
+    display: flex;
+    gap: 10px;
+  }
+  .place-order-right {
+    width: 100%;
+    max-width: max (40%, 500px);
+  }
+  
+  .orders-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+    border: 1px solid #c5c5c5;
+  }
+  
+  .order-header {
+    background-color: rgb(240, 242, 242);
+    border: 1px solid rgb(213, 217, 217);
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    padding: 20px 25px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .order-header-left-section {
+    display: flex;
+    flex-shrink: 0;
+  }
+  
+  .order-header-label {
+    font-weight: 700;
+  }
+  
+  .order-date,
+  .order-total {
+    margin-right: 45px;
+  }
+  
+  .order-header-right-section {
+    flex-shrink: 1;
+  }
+
+  .payment-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .payment-option {
+    margin: 1rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .chapa {
+    background: #4CAF50;
+    color: white;
+  }
+  
+  .paypal {
+    background: #0070ba;
+    color: white;
+  }
+  .payment{
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Reduced gap */
+  }
+
+  .payment input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffcc66;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .payment input[type="radio"]:checked {
+    background-color: #ffcc66;
+    border-color: tomato;
+  }
+
+  .payment input[type="radio"]:hover {
+    border-color: goldenrod;
+  }
+
+  .payment-method-image {
+    width: 50px;
+    height: auto;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  
+  @media (max-width: 575px) {
+    .place-order {
+      margin-top: 180px;
+    }
+    .order-header {
+      flex-direction: column;
+      align-items: start;
+      line-height: 23px;
+      padding: 15px;
+    }
+  
+    .order-header-left-section {
+      flex-direction: column;
+    }
+  
+    .order-header-label {
+      margin-right: 5px;
+    }
+  
+    .order-total {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      margin-right: 0;
+    }
+  
+    .order-header-right-section {
+      display: grid;
+      grid-template-columns: auto 1fr;
+    }
+  }
+  
+  .order-details-grid {
+    padding: 40px 25px;
+    border: 1px solid rgb(213, 217, 217);
+    border-top: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  
+    display: grid;
+    grid-template-columns: 110px 1fr 220px;
+    column-gap: 35px;
+    row-gap: 60px;
+    align-items: center;
+  }
+  
+  @media (max-width: 800px) {
+    .order-details-grid {
+      grid-template-columns: 110px 1fr;
+      row-gap: 0;
+      padding-bottom: 8px;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .order-details-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .product-name {
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  
+  .delivery-date {
+    margin-bottom: 3px;
+  }
+  
+  .product-quantity {
+    margin-bottom: 8px;
+  }
+  
+  @media (max-width: 800px) {
+    .place-order-left,
+    .place-order-right {
+      max-width: 100%;
+    }
+    .order-header {
+      flex-direction: column;
+      align-items: start;
+      line-height: 23px;
+      padding: 15px;
+    }
+    .orders-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .place-order {
+      margin-top: 100px;
+      flex-direction: column;
+    }
+  
+    .place-order-left,
+    .place-order-right {
+      margin-bottom: 20px;
+    }
+  
+    .order-header {
+      flex-direction: column;
+      align-items: start;
+      line-height: 23px;
+      padding: 15px;
+    }
+  
+    .order-header-left-section,
+    .order-header-right-section {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+  
+    .order-header-label {
+      margin-right: 5px;
+    }
+  
+    .order-total {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      margin-right: 0;
+    }
+  
+    .order-details-grid {
+      grid-template-columns: 1fr;
+      row-gap: 0;
+      padding-bottom: 8px;
+    }
+  }
+  .button {
+    margin: 10px;
+    padding: 5px;
+    background-color: #ffcc66;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: larger;
+  }
+  .button:hover {
+    background-color: tomato;
+  }
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Add spacing between spinner and text */
+}
+  .spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid tomato;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

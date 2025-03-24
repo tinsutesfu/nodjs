@@ -1,0 +1,40 @@
+/* components/LoadingSpinner.css */
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 300px; /* Adjusted for better visibility */
+}
+
+.loading-spinner {
+    width: 60px; /* Increased size */
+    height: 60px; /* Increased size */
+    border: 6px solid transparent; /* Thicker border */
+    border-top: 6px solid #4CAF50; /* Primary color */
+    border-right: 6px solid #FF5722; /* Secondary color */
+    border-radius: 50%;
+    animation: spin 1s linear infinite, glow 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 10px #4CAF50, 0 0 20px #FF5722; }
+    50% { box-shadow: 0 0 20px #4CAF50, 0 0 40px #FF5722; }
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

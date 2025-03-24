@@ -1,0 +1,457 @@
+.amazon-header {
+    background-color: rgb(19, 25, 33);
+    color: white;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    z-index: 1000;
+    transition: height 0.3s ease;
+  }
+  
+  .amazon-header:hover {
+    height: 80px;
+  }
+  
+  .amazon-header-left-section {
+    width: 550px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-link {
+    display: inline-block;
+    padding: 0 6px;
+    margin: 0;
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: border 0.3s, color 0.3s;
+  }
+  
+  .header-link:hover {
+    border: 1px solid white;
+    color: goldenrod;
+  }
+  
+  .amazon-logo {
+    width: 50px;
+    border-radius: 50%;
+    padding: 0;
+    margin-top: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  .amazon-logo:hover {
+    transform: rotate(360deg);
+  }
+  
+  .navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    color: gray;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .navbar-menu .active {
+    border-bottom: 2px solid #b2b2c7;
+    color: whitesmoke;
+  }
+  
+  .navbar-menu a {
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .navbar-menu a:hover {
+    background-color: rgba(116, 114, 114, 0.8);
+    cursor: pointer;
+    color: goldenrod;
+  }
+  
+  .amazon-header-middle-section {
+    flex: 1;
+    max-width: 400px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-bar {
+    flex: 1;
+    width: 0;
+    font-size: 16px;
+    height: 38px;
+    padding-left: 15px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    transition: box-shadow 0.3s;
+  }
+  
+  .search-bar:focus {
+    box-shadow: 0 0 10px rgba(254, 189, 105, 0.8);
+  }
+  
+  .search-button {
+    background-color: rgb(254, 189, 105);
+    border: none;
+    width: 45px;
+    height: 40px;
+    border-radius: 0 4px 4px 0;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .search-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .search-icon {
+    height: 22px;
+    margin-left: 2px;
+    margin-top: 3px;
+  }
+  
+  .amazon-header-right-section {
+    width: 350px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .orders-link {
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .orders-link:hover {
+    color: goldenrod;
+  }
+  
+  .orders-text {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 5px;
+    margin-right: 15px;
+  }
+  
+  .cart-link {
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .cart-icon {
+    width: 50px;
+    transition: transform 0.3s;
+  }
+  
+  .cart-link:hover .cart-icon {
+    transform: rotate(-20deg) scale(1.1);
+  }
+  
+  .cart-text {
+    margin-top: 12px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  
+  .cart-quantity {
+    color: rgb(240, 136, 4);
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    top: 4px;
+    left: 22px;
+    width: 26px;
+    text-align: center;
+  }
+  
+  .sign-text {
+    background: transparent;
+    font-size: 16px;
+    border: 1px solid goldenrod;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    color: white;
+  }
+  
+  .sign-text:hover {
+    background-color: rgb(240, 136, 4);
+    transform: scale(1.05);
+  }
+  
+  .navbar-profile {
+    position: relative;
+  }
+  
+  .profile-dropdown {
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+  }
+  
+  .profile {
+    padding: 25px;
+    font-size: xx-large;
+    cursor: pointer;
+  }
+  
+  .navbar-profile:hover .profile-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #5e5e5e;
+    padding: 12px 25px;
+    border-radius: 5px;
+    border: 1px solid goldenrod;
+    list-style: none;
+    opacity: 1;
+  }
+  
+  .profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .profile-dropdown li:hover {
+    background-color: goldenrod;
+  }
+  
+  hr {
+    color: white;
+    height: 1px;
+    width: 100%;
+  }
+  
+ /* Existing styles remain until media queries */
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 10px;
+}
+
+.hamburger-line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Existing styles remain until media queries */
+
+/* Desktop menu styles */
+.desktop-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  color: gray;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.desktop-menu .active {
+  border-bottom: 2px solid #b2b2c7;
+  color: whitesmoke;
+}
+
+.desktop-menu a {
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.desktop-menu a:hover {
+  background-color: rgba(116, 114, 114, 0.8);
+  cursor: pointer;
+  color: goldenrod;
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  background-color: rgb(19, 25, 33);
+  padding: 15px;
+  z-index: 999;
+  flex-direction: column;
+}
+
+.mobile-menu.active {
+  display: flex;
+  
+}
+.mobile-menu .active {
+  border-bottom: none;
+}
+
+.mobile-navbar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mobile-navbar-menu li {
+  padding: 10px;
+}
+
+.mobile-navbar-menu a {
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+}
+
+/* Medium devices (tablets, 768px and below) */
+@media screen and (min-width: 500px) and (max-width: 900px) {
+  .amazon-header-middle-section {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .amazon-header {
+    height: 60px;
+    padding: 0 10px;
+  }
+
+  .amazon-header-left-section {
+    width: auto;
+    flex: 1;
+  }
+
+ 
+
+  .amazon-header-middle-section {
+    max-width: 300px;
+  }
+
+  .amazon-header-right-section {
+    width: auto;
+    gap: 10px;
+  }
+
+  .cart-text {
+    display: none;
+  }
+
+  .cart-icon {
+    width: 40px;
+  }
+
+  .cart-quantity {
+    left: 18px;
+    top: 2px;
+  }
+
+  .sign-text {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Existing styles remain until media queries */
+
+/* Add a specific class for the signin link  */
+
+
+/* Small devices (mobile, 480px and below) */
+@media screen and (max-width: 480px) {
+  .amazon-header {
+    height: 50px;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  .amazon-header-left-section {
+    width: auto;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .amazon-logo {
+    width: 25px;
+    height: 25px;
+    margin-top: 0;
+    display: block;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .amazon-header-middle-section {
+    max-width: 200px;
+    margin: 0 5px;
+    flex: 1;
+  }
+
+  .search-bar {
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .search-button {
+    height: 34px;
+    width: 35px;
+  }
+
+  .search-icon {
+    height: 18px;
+  }
+
+  .amazon-header-right-section {
+    width: auto;
+    margin-right: 0;
+    flex: 0 0 auto;
+  }
+
+  /* Hide all direct children of right section except hamburger */
+  .amazon-header-right-section > .cart-link,
+  .amazon-header-right-section > .signin-link,
+  .amazon-header-right-section > .navbar-profile {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Ensure mobile menu items are styled correctly */
+  .mobile-menu .sign-text {
+    margin-top: 15px;
+    width: 90%;
+    text-align: center;
+    display: block; /* Ensure it’s visible in mobile menu */
+  }
+}

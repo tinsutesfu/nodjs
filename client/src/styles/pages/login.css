@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem; /* Increased padding for better spacing */
+  background-color: #f8f9fa; /* Light background */
+}
+
+.section {
+  width: 100%;
+  max-width: 450px; /* Slightly wider max-width */
+  min-height: 450px; /* Increased min-height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem; /* Increased padding */
+  background-color: #ffffff; /* White card background */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.form,
+h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  padding-bottom: 1.5rem; /* Increased padding */
+  color: #333; /* Darker text color */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+a,
+a:visited {
+  color: #007bff; /* Primary blue color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.input,
+.passwordshow,
+textarea {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem; /* Use rem for font size */
+  padding: 0.8rem; /* Increased padding */
+  border-radius: 6px; /* Rounded corners */
+  border: 1px solid #ced4da; /* Light border */
+  outline: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input:focus,
+.pwinput:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.passwordshow {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pwinput {
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.pwbutton {
+  color: #6c757d; /* Gray color */
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+label,
+.button {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.button {
+  padding: 1rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.instructions {
+  font-size: 0.8rem;
+  border-radius: 6px;
+  background: #f0f0f0;
+  color: #333;
+  padding: 0.5rem;
+  position: relative;
+  bottom: -10px;
+}
+
+.instructions > svg {
+  margin-right: 0.5rem;
+}
+
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+
+.hide {
+  display: none;
+}
+
+.valid {
+  color: limegreen;
+  margin-left: 0.25rem;
+}
+
+.invalid {
+  color: red;
+  margin-left: 0.25rem;
+}
+
+.errmsg {
+  background-color: #f8d7da;
+  color: #721c24;
+  font-weight: 600;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+.line {
+  display: inline-block;
+}
+
+.persistCheck {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.persistCheck input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  section {
+    padding: 1.5rem;
+  }
+
+  .input,
+  .button,
+  textarea {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+
+  .button {
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  section {
+    padding: 1rem;
+    min-height: 400px;
+  }
+
+  .input,
+  .button,
+  textarea {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
+
+  .button {
+    padding: 0.7rem 1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  section {
+    min-height: 350px;
+  }
+}
