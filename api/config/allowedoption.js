@@ -4,7 +4,7 @@ const allowedoption = [
     'http://localhost:3500',
     'http://localhost:5173',
     'https://nodjs-api.onrender.com',
-    'https://5899-188-226-162-9.ngrok-free.app'
+    'https://nodjs-client.onrender.com'
 ];
 
 export default allowedoption;
