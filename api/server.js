@@ -67,7 +67,12 @@ app.use((err, req, res, next) => {
     res.status(500).send('Internal Server Error');
 });
 
-app.listen(3500, () => {
-    connect();
-    console.log("Connected to backend on port 3500");
-});
+
+
+
+
+app.listen( process.env.PORT || 3500, () => {
+    connect()
+    console.log("Connected to backend.");
+  });
+
