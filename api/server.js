@@ -1,4 +1,3 @@
-// api/server.js
 import express from "express";
 import dotenv from "dotenv";
 import { connect } from "./config/db.js";
@@ -25,19 +24,13 @@ dotenv.config();
 const __dirname = path.resolve();
 const clientDistPath = path.join(__dirname, "../client/dist");
 
-// Log all requests
-app.use((req, res, next) => {
-    console.log(`[${req.method}] ${req.path} - Headers:`, req.headers);
-    next();
-});
-
 // Core middleware
 app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());
 
-// Serve static files
+// Serve static files first
 app.use(express.static(clientDistPath));
 app.use("/images", express.static("uploads"));
 
@@ -48,31 +41,25 @@ app.use('/routes/logout', logoutroute);
 app.use('/routes/product', productroute);
 app.use('/routes/payment', verifyrouter);
 
-// Protected routes
+// Apply credentials before protected routes
 app.use(credentials);
 app.use(verifyJWT);
 app.use('/routes/users', userroute);
 app.use('/routes/cart', cartroute);
 app.use('/routes/place', orderrouter);
 
-// Catch-all
+// Catch-all for client-side routes
 app.get('*', (req, res) => {
-    console.log('Catch-all serving index.html for:', req.path);
-    res.sendFile(path.join(clientDistPath, "index.html"));
+  res.sendFile(path.join(clientDistPath, "index.html"));
 });
 
 // Error handler
 app.use((err, req, res, next) => {
-    console.error('Error:', err.stack);
-    res.status(500).send('Internal Server Error');
+  console.error(err.stack);
+  res.status(500).send('Internal Server Error');
 });
 
-
-
-
-
-app.listen( process.env.PORT || 3500, () => {
-    connect()
-    console.log("Connected to backend.");
-  });
-
+app.listen(process.env.PORT || 3500, () => {
+  connect();
+  console.log("Connected to backend.");
+});
