@@ -24,7 +24,8 @@ const useRefreshToken = () => {
 
             return accessToken;
         } catch (err) {
-            console.error('Failed to refresh access token:', err);
+            console.error('Refresh failed:', err.response?.status, err.response?.data);
+            throw err; // Propagate error for debugging
         }
     };
 

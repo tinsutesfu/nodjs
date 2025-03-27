@@ -1,10 +1,10 @@
 const allowedoption = [
-    'http://localhost:5174',
-    'http://127.0.0.1:5500',
-    'http://localhost:3500',
-    'http://localhost:5173',
-    
-    'https://5899-188-226-162-9.ngrok-free.app'
+    'http://localhost:5174',           // Vite dev server (if used)
+    'http://127.0.0.1:5500',          // Optional local server
+    'http://localhost:3500',          // Backend local
+    'https://nodjs-api.onrender.com', // Backend production
+    'http://localhost:5173',          // Vite dev server (another port)
+    'https://nodjs-client.onrender.com' // Frontend production
 ];
 
 export default allowedoption;
