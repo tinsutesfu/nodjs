@@ -23,7 +23,7 @@ const app = express();
 
 // Load environment variables
 dotenv.config();
-
+app.use("/images", express.static("uploads"));
 // Middleware setup
 app.use(credentials);
 app.use(cors(corsOptions));
@@ -46,7 +46,7 @@ app.use(verifyJWT);
 app.use('/routes/users', userroute);
 app.use('/routes/cart', cartroute);
 app.use('/routes/place', orderrouter);
-app.use("/images", express.static("uploads"));
+
 // Server startup
 app.listen(process.env.PORT || 3500, () => {
     connect();
