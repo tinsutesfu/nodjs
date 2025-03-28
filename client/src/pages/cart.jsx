@@ -200,7 +200,7 @@ useEffect(() => {
                     <img
                       className="product-image"
                       src=
-                      {'http://localhost:3500/images/'+ products.find((p) => p._id === item.productId)?.image}
+                      {'https://nodjs-49td.onrender.com/images/'+ products.find((p) => p._id === item.productId)?.image}
                     />
 
                     <div className="cart-item-details">

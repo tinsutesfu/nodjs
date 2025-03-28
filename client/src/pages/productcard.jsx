@@ -115,7 +115,7 @@ export const Productcard = ({product}) => {
     <div className="product-image-container">
       <img
         className="product-image"
-        src={'http://localhost:3500/images/' + product.image}
+       src={'https://nodjs-49td.onrender.com/images/' + product.image}
         alt={product.image}
       />
     </div>
