@@ -32,7 +32,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Static files
-app.use("/images", express.static("uploads"));
+
 
 // Routes
 app.use('/routes/auth', authroute);
@@ -46,7 +46,7 @@ app.use(verifyJWT);
 app.use('/routes/users', userroute);
 app.use('/routes/cart', cartroute);
 app.use('/routes/place', orderrouter);
-
+app.use("/images", express.static("uploads"));
 // Server startup
 app.listen(process.env.PORT || 3500, () => {
     connect();
