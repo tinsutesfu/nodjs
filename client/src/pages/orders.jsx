@@ -155,7 +155,7 @@ const PlaceOrder = () => {
                   </div>
                   <img
                     className="product-image"
-                    src={`http://localhost:3500/images/${products.find((p) => p._id === item.productId)?.image}`}
+                    src={`https://nodjs-49td.onrender.com/images/${products.find((p) => p._id === item.productId)?.image}`}
                     alt={products.find((p) => p._id === item.productId)?.name}
                   />
                   <div className="cart-item-details">
